@@ -1,4 +1,4 @@
-name: Upload Python Package
+name: Build Python Package
 
 on:
   release:
@@ -41,8 +41,3 @@ jobs:
     - name: Build a binary wheel and a source tarball
       run: |
         python setup.py sdist
-    - name: Publish a Python distribution to PyPI
-      uses: pypa/gh-action-pypi-publish@master
-      with:
-        user: ${{ secrets.PYPI_USERNAME }}
-        password: ${{ secrets.PYPI_PASSWORD }}

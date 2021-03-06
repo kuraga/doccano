@@ -47,7 +47,6 @@ In the future, they will be integrated into the currect code or removed:
 /
 ├── app/
 ├── └── server/
-└── docker-compose.yml
 ```
 
 ## Backend

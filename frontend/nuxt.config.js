@@ -67,7 +67,17 @@ export default {
     '@nuxt/typescript-build',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_TRACKING_ID
-    }]
+    }],
+    ['@nuxtjs/fontawesome', {
+      component: 'fa',
+      icons: {
+        solid: true,
+        regular: true,
+        brands: true
+      }
+    }],
+    '@nuxtjs/google-fonts',
+    'nuxtjs-mdi-font'
   ],
   /*
   ** Axios module configuration
@@ -134,6 +144,14 @@ export default {
           name: '[path][name].[ext]'
         }
       })
+    }
+  },
+
+  googleFonts: {
+    families: {
+      'Roboto': [ 300, 400, 500, 700 ],
+      'Material Icons': true,
+      'Open Sans': [ 300, 400, 700 ]
     }
   }
 }
